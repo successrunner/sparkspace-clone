@@ -5,18 +5,23 @@ import Logo from '@/components/Logo';
 import { Button } from '@/components/ui/button';
 import { FOOTER_MENUS } from '@/lib/constants';
 
+import MobileMenu from '../MobileMenu';
+
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <nav className="sticky top-0 z-50 mx-auto flex max-w-screen-2xl items-center justify-between bg-transparent px-4 py-3 backdrop-blur-[8px]">
+      <nav className="sticky top-0 z-50 mx-auto flex w-full max-w-screen-2xl items-center justify-between bg-transparent px-4 py-3 backdrop-blur-[8px]">
         <Logo />
-        <Button>
-          <Link to="/login">Sign Up Free</Link>
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
+        <Link to="/" className="hidden sm:block">
+          <Button>
+            Sign Up Free
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+        <MobileMenu />
       </nav>
-      <main className="py-10">{children}</main>
-      <footer className="mx-auto max-w-screen-2xl p-4 sm:px-4 sm:py-6">
+      <main className="flex-1 py-10">{children}</main>
+      <footer className="mx-auto w-full max-w-screen-2xl p-4 sm:px-4 sm:py-6">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
             <Logo />
@@ -43,7 +48,7 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
         <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
         <span className="text-sm text-gray-500 sm:text-center">
           © 2024{' '}
-          <a href="https://flowbite.com" className="hover:underline">
+          <a href="https://sparkspace.ai" className="hover:underline">
             Spark Space™
           </a>
           . All Rights Reserved.

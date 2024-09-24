@@ -14,9 +14,9 @@ const NotFound = () => {
             Looks like you've ventured into the unknown digital realm.
           </p>
         </div>
-        <Button asChild>
-          <Link to="/">Return to website</Link>
-        </Button>
+        <Link to="/">
+          <Button>Return to website</Button>
+        </Link>
       </div>
     </div>
   );

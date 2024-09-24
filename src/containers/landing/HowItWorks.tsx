@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import TestEssayForm from '@/components/forms/TestEssayForm';
 import { Button } from '@/components/ui/button';
 
@@ -15,8 +17,12 @@ const HowItWorks = () => {
           feedback to enhance their learning experience.
         </p>
         <div className="flex gap-4">
-          <Button>Learn more</Button>
-          <Button variant="outline">Speack to Teachers</Button>
+          <Link to="/">
+            <Button>Learn more</Button>
+          </Link>
+          <Link to="/">
+            <Button variant="outline">Speack to Teachers</Button>
+          </Link>
         </div>
       </div>
       <div className="w-full md:w-1/2 lg:w-5/12">

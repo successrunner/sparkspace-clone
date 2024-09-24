@@ -73,3 +73,19 @@
 .slick-slider {
   overflow: hidden;
 }
+
+@keyframes button-flicker-animation {
+  0%,
+  100% {
+    outline: 1px solid hsl(var(--primary));
+  }
+  50% {
+    outline: 1px solid transparent;
+  }
+}
+
+.button-flicker {
+  animation: button-flicker-animation 1.3s ease-in-out infinite;
+  outline: 1px solid hsl(var(--primary));
+  outline-offset: 3px;
+}

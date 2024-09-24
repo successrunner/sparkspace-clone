@@ -9,8 +9,8 @@ import { Button } from '@/components/ui/button';
 const HeroSection = () => {
   return (
     <section className="mx-auto max-w-screen-xl px-4 py-8 text-center lg:px-12 lg:py-16">
-      <a
-        href="#"
+      <Link
+        to="/"
         className="mb-7 inline-flex items-center rounded-full bg-gray-100 px-1 py-1 pr-4 text-sm text-gray-700 hover:bg-gray-200"
         role="alert"
       >
@@ -21,7 +21,7 @@ const HeroSection = () => {
           Spark Space is out! See what's new
         </span>
         <ChevronRight className="ml-5 h-4 w-4" />
-      </a>
+      </Link>
       <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">
         Revolutionize Your Essay Grading
       </h1>
@@ -31,14 +31,18 @@ const HeroSection = () => {
         grading platform, saving you time and enhancing the learning experience.
       </p>
       <div className="mb-8 flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-x-4 sm:space-y-0 lg:mb-16">
-        <Button>
-          <Link to="#">Get started for free</Link>
-          <ArrowRight className="ml-2 h-4 w-4" />
-        </Button>
-        <Button variant="outline">
-          <Video className="mr-2 h-4 w-4" />
-          <Link to="#">Watch video</Link>
-        </Button>
+        <Link to="/">
+          <Button>
+            Get started for free
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
+        <Link to="/">
+          <Button variant="outline">
+            <Video className="mr-2 h-4 w-4" />
+            Watch video
+          </Button>
+        </Link>
       </div>
       <div className="px-4 text-center">
         <span className="font-semibold uppercase text-gray-400">
