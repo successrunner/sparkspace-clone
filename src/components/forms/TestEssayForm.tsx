@@ -13,6 +13,12 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from '@/components/ui/tooltip';
 import { GRADE_OPTIONS, SAMPLE_ESSAY, SUBJECT_OPTIONS } from '@/lib/constants';
 
 const TestEssayForm = () => {
@@ -86,15 +92,24 @@ const TestEssayForm = () => {
       </div>
       <div className="flex items-center justify-between">
         <Label className="text-xl">Student Essay</Label>
-        <Clipboard
-          className={clsx(
-            'mr-1 h-5 w-5 cursor-pointer text-primary',
-            step === 'essay' ? 'button-flicker' : ''
-          )}
-          onClick={() => {
-            setEssay(SAMPLE_ESSAY);
-          }}
-        />
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Clipboard
+                className={clsx(
+                  'mr-1 h-5 w-5 cursor-pointer text-primary',
+                  step === 'essay' ? 'button-flicker' : ''
+                )}
+                onClick={() => {
+                  setEssay(SAMPLE_ESSAY);
+                }}
+              />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Copy a sample essay</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
       </div>
       <Textarea
         rows={10}
