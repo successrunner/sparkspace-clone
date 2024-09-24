@@ -50,13 +50,19 @@ const HeroSection = () => {
         </span>
         <div className="flex w-full items-center justify-between gap-10 lg:justify-center lg:gap-20">
           <div className="max-w-[200px] flex-1">
-            <img src={eSparkLogo} alt="eSpark" />
+            <Link to="https://www.esparklearning.com/" target="_blank">
+              <img src={eSparkLogo} alt="eSpark" />
+            </Link>
           </div>
           <div className="max-w-[200px] flex-1">
-            <img src={stanfordLogo} alt="Stanford" />
+            <Link to="https://www.stanford.edu/" target="_blank">
+              <img src={stanfordLogo} alt="Stanford" />
+            </Link>
           </div>
           <div className="max-w-[200px] flex-1">
-            <img src={rocketshipLogo} alt="RocketShip" />
+            <Link to="https://www.rocketshipschools.org/" target="_blank">
+              <img src={rocketshipLogo} alt="RocketShip" />
+            </Link>
           </div>
         </div>
       </div>
