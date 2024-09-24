@@ -69,3 +69,7 @@
     @apply bg-background text-foreground;
   }
 }
+
+.slick-slider {
+  overflow: hidden;
+}
